@@ -24,7 +24,7 @@ class Canvas extends React.Component {
     };
     this.state = {
       marginTop: "0px",
-      sceneType: sceneTypeConstant.BOOK_DETAILS,
+      sceneType: sceneTypeConstant.WELCOME,
       params: [],
     };
   }

@@ -12,7 +12,7 @@ const LoremIpsumPara =
 const BookDetailsPage = () => {
   return (
     <div style={{ width: "85%", margin: "0 auto" }}>
-      <Header buttonText="BACK TO LIST" categoryText="Category" />
+      <Header buttonText="BACK TO BOOK LIST" categoryText="Category" />
       <div
         style={{
           display: "grid",

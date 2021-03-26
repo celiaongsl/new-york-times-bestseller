@@ -1,5 +1,5 @@
 import React from "react";
-import LibreText3 from "../../Typography/LibreFranklin/LibreText3";
+import LibreText2 from "../../Typography/LibreFranklin/LibreText2";
 
 const TextButton = (props) => {
   const { children, onClick } = props;
@@ -13,7 +13,7 @@ const TextButton = (props) => {
       }}
       onClick={onClick}
     >
-      <LibreText3>{children}</LibreText3>
+      <LibreText2>{children}</LibreText2>
     </button>
   );
 };
