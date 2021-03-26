@@ -10,6 +10,7 @@ const WelcomePage = () => {
         <img
           style={{ width: "417px", height: "auto" }}
           src={process.env.PUBLIC_URL + "/img/new_york_times_logo.png"}
+          alt="The New York Times Logo"
         />
         <DomineHeader2>BESTSELLERS LIST</DomineHeader2>
       </div>
