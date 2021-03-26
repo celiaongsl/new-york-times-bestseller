@@ -1,7 +1,7 @@
 import React from "react";
-import LibreHeader1 from "../Typography/LibreFranklin/LibreHeader1";
+import LibreHeader1 from "../../Typography/LibreFranklin/LibreHeader1";
 
-const Button = (props) => {
+const RoundButton = (props) => {
   const { onClick, children } = props;
   return (
     <button
@@ -20,4 +20,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default RoundButton;

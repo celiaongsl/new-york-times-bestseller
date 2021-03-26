@@ -1,11 +1,11 @@
 import React from "react";
-import Button from "../components/Button";
+import RoundButton from "../components/Button/RoundButton";
 import DomineHeader1 from "../components/Typography/Domine/DomineHeader1";
 import DomineHeader2 from "../components/Typography/Domine/DomineHeader2";
 
 const WelcomePage = () => {
   return (
-    <div style={{ height: "calc(100vh - 96px)" }}>
+    <div>
       <div style={{marginTop: '20px'}}>
         <img
           style={{ width: "417px", height: "auto" }}
@@ -24,8 +24,8 @@ const WelcomePage = () => {
           justifyContent: "space-around",
         }}
       >
-        <Button>FICTION</Button>
-        <Button>NON-FICTION</Button>
+        <RoundButton>FICTION</RoundButton>
+        <RoundButton>NON-FICTION</RoundButton>
       </div>
       
     </div>

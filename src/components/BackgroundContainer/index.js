@@ -13,10 +13,9 @@ const BackgroundContainer = (props) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
-        
       }}
     >
-      {children}
+      <div style={{ minHeight: "calc(100vh - 96px)" }}>{children}</div>
     </div>
   );
 };
