@@ -1,0 +1,11 @@
+synonym:
+  entities:
+    fiction:
+      synonyms:
+      - fiction
+      - fiction books
+    non-fiction:
+      synonyms:
+      - non-fiction
+      - non-fiction books
+  matchType: EXACT_MATCH

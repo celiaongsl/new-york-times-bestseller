@@ -1,0 +1,15 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  transitionToScene: CategoryBestsellers
+intentEvents:
+- intent: ViewSpecificBookCategory
+  transitionToScene: CategoryBestsellers
+onEnter:
+  webhookHandler: welcome
+slots:
+- commitBehavior:
+    writeSessionParam: book_categories_options
+  name: book_categories_options
+  required: true
+  type:
+    name: book_categories_options

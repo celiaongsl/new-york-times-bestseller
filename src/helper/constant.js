@@ -1,0 +1,5 @@
+export const sceneTypeConstant =  {
+    WELCOME: 'WELCOME',
+    CATEGORY_BESTSELLERS: 'CATEGORY_BESTSELLERS',
+    BOOK_DETAILS: 'BOOK_DETAILS'
+}

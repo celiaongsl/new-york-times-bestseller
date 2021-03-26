@@ -1,0 +1,13 @@
+synonym:
+  acceptUnknownValues: true
+  entities:
+    life after death:
+      synonyms:
+      - life after death
+    the four winds:
+      synonyms:
+      - the four winds
+    the midnight library:
+      synonyms:
+      - the midnight library
+  matchType: EXACT_MATCH

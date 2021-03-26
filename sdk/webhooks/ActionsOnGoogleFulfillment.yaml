@@ -1,0 +1,6 @@
+handlers:
+- name: category_bestsellers
+- name: welcome
+- name: book_details
+inlineCloudFunction:
+  executeFunction: ActionsOnGoogleFulfillment

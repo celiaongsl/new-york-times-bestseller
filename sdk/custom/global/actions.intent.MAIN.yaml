@@ -1,0 +1,7 @@
+handler:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        canvas:
+          url: https://new-york-times-bestseller.web.app/
+transitionToScene: Welcome

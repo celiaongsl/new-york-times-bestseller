@@ -1,0 +1,7 @@
+defaultLocale: en
+localizedSettings:
+  displayName: New York Times Bestseller
+  pronunciation: New York Times Bestseller
+  voice: female_1
+projectId: new-york-times-bestseller
+usesInteractiveCanvas: true
