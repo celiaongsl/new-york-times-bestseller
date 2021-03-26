@@ -23,6 +23,7 @@ const CategoryBestsellersPage = (props) => {
               weeksOnList={item.weeksOnList}
               title={item.title}
               author={item.author}
+              bookCoverURL={item.bookCoverURL}
             />
           );
         })}

@@ -76,6 +76,7 @@ class Canvas extends React.Component {
     this.setState((state) => {
       return {
         sceneType: sceneTypeConstant.BOOK_DETAILS,
+        params,
       };
     });
   };
@@ -105,7 +106,7 @@ class Canvas extends React.Component {
     if (sceneType === sceneTypeConstant.BOOK_DETAILS)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <BookDetailsPage />
+          <BookDetailsPage params={this.state.params} />
         </BackgroundContainer>
       );
 

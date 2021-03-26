@@ -6,7 +6,7 @@ import LibreText2 from "../Typography/LibreFranklin/LibreText2";
 import LibreText3 from "../Typography/LibreFranklin/LibreText3";
 
 const BookListCard = (props) => {
-  const { position, weeksOnList, title, author } = props;
+  const { position, weeksOnList, title, author, bookCoverURL } = props;
   return (
     <Paper>
       <DomineHeader2 customStyles={{ color: "#828282" }}>
@@ -14,7 +14,7 @@ const BookListCard = (props) => {
       </DomineHeader2>
 
       <img
-        src={process.env.PUBLIC_URL + "/img/background_image.png"}
+        src={bookCoverURL}
         style={{ height: "141px", width: "93px" }}
         alt="The Book Cover"
       />
