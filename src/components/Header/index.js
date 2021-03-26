@@ -1,4 +1,5 @@
 import React from "react";
+import { capitalizeString } from "../../helper/utils";
 import TextButton from "../Button/TextButton";
 import DomineHeader2 from "../Typography/Domine/DomineHeader2";
 
@@ -18,7 +19,7 @@ const Header = (props) => {
           src={process.env.PUBLIC_URL + "/img/new_york_times_logo.png"}
           alt="The New York Times Logo"
         />
-        <DomineHeader2>{categoryText}</DomineHeader2>
+        <DomineHeader2>{capitalizeString(categoryText)}</DomineHeader2>
       </div>
     </React.Fragment>
   );

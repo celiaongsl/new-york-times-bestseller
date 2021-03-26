@@ -149,23 +149,48 @@ app.handle("welcome", (conv) => {
 });
 
 app.handle("book_details", (conv) => {
+  const chosenBook = conv.intent.params.books_options;
+
+  // oof but... I don't think I can find chosenBook if it doesn't direct to the intent... argh
+
+  // Actually you just need to get the intent. It doesn't matter right, cause u dw to keep track of the params lol
+
   conv.add("<speak>Here's the book details you wanted</speak>");
   conv.add(
     new Canvas({
       data: {
         scene: "BOOK_DETAILS",
+        // params: conv.intent.param
       },
     })
   );
 });
 
+handleTypeOverride = ({ conv, list }) => {
+  conv.session.typeOverrides = [
+    {
+      name: "books_options",
+      mode: "TYPE_REPLACE",
+      synonym: {
+        entries: [
+          list.map((item) => {
+            return { name: item.title, synonyms: [item.title] };
+          }),
+        ],
+      },
+    },
+  ];
+};
+
 app.handle("category_bestsellers", (conv) => {
   let bookData = [];
-
-  if (conv.session.params.book_categories_options === "fiction") {
+  let categoryOption = conv.session.params.book_categories_options;
+  if (categoryOption === "fiction") {
     bookData = FICTION_LIST;
+    handleTypeOverride({ conv, list: FICTION_LIST });
   } else {
     bookData = NON_FICTION_LIST;
+    handleTypeOverride({ conv, list: NON_FICTION_LIST });
   }
 
   conv.add("<speak>Here's the bestsellers for this category</speak>");
@@ -173,7 +198,7 @@ app.handle("category_bestsellers", (conv) => {
     new Canvas({
       data: {
         scene: "CATEGORY_BESTSELLERS",
-        params: bookData
+        params: { bookData, categoryOption },
       },
     })
   );

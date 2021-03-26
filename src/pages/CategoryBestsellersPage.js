@@ -4,9 +4,10 @@ import Header from "../components/Header";
 
 const CategoryBestsellersPage = (props) => {
   const { params } = props;
+  const { bookData, categoryOption } = params;
   return (
     <div style={{ width: "85%", margin: "0 auto" }}>
-      <Header buttonText="BACK TO CATEGORIES" categoryText="Category" />
+      <Header buttonText="BACK TO CATEGORIES" categoryText={categoryOption} />
       <div
         style={{
           display: "grid",
@@ -15,7 +16,7 @@ const CategoryBestsellersPage = (props) => {
           paddingBottom: "50px",
         }}
       >
-        {params.map((item) => {
+        {bookData.map((item) => {
           return (
             <BookListCard
               position={item.position}
