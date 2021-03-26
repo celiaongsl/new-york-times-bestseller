@@ -263,9 +263,11 @@ handleTypeOverride = ({ conv, list }) => {
 };
 
 app.handle("category_bestsellers", (conv) => {
+  let intentCategoryOption =
+    conv.intent.params.book_categories_options.resolved;
   let bookData = [];
-  let categoryOption = conv.session.params.book_categories_options;
-  if (categoryOption === "fiction") {
+  // let categoryOption = conv.session.params.book_categories_options;
+  if (intentCategoryOption === "fiction") {
     bookData = FICTION_LIST;
     handleTypeOverride({ conv, list: FICTION_LIST });
   } else {
@@ -274,13 +276,13 @@ app.handle("category_bestsellers", (conv) => {
   }
 
   conv.add(
-    `<speak>Here's the bestsellers for the ${categoryOption} category!</speak>`
+    `<speak>Here's the bestsellers for the ${intentCategoryOption} category!</speak>`
   );
   conv.add(
     new Canvas({
       data: {
         scene: "CATEGORY_BESTSELLERS",
-        params: { bookData, categoryOption },
+        params: { bookData, categoryOption: intentCategoryOption },
       },
     })
   );

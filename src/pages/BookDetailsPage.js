@@ -6,9 +6,6 @@ import LibreText1 from "../components/Typography/LibreFranklin/LibreText1";
 import LibreText2 from "../components/Typography/LibreFranklin/LibreText2";
 import LibreText3 from "../components/Typography/LibreFranklin/LibreText3";
 
-const LoremIpsumPara =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut semper sapien. Aliquam erat volutpat. Vestibulum id varius lacus, et posuere neque. Maecenas quis condimentum orci. Suspendisse mollis porttitor nunc, nec sollicitudin enim dignissim ut. Nulla metus nisi, ornare eget quam at, accumsan porta lectus. Proin sed nisl ut felis laoreet pharetra. Quisque sed tellus eu sem placerat efficitur. Proin lobortis hendrerit ullamcorper. Duis ullamcorper lobortis augue, vel tristique lectus pretium ac. Suspendisse tincidunt varius massa vel accumsan. Sed vel vehicula nibh, non eleifend turpis. Quisque ac sem at risus ultrices laoreet ut eget sem. Etiam quis tempor ante. Donec aliquam mauris eros, non vulputate purus tincidunt ac. Etiam tristique erat nulla, vel viverra purus vehicula sit amet. \n\n Ut scelerisque dui sed porta laoreet. Nulla facilisi. Mauris accumsan bibendum nunc, id consectetur nunc bibendum a. Aenean vitae viverra ex, id imperdiet mi. Donec vulputate, mauris eu vestibulum sollicitudin, urna turpis sodales nisl, sit amet pulvinar ipsum turpis non nisi. Vivamus placerat risus et dictum varius. Morbi varius porttitor velit, eu luctus risus iaculis sed. Aliquam volutpat lorem at velit placerat bibendum. Mauris turpis purus, malesuada sit amet risus quis, maximus pellentesque mi. Suspendisse risus justo, condimentum commodo nisi sed, varius condimentum augue. Fusce ligula felis, efficitur eget auctor sed, vulputate in libero. Nunc mollis placerat lacus, in dignissim nunc fringilla dignissim.";
-
 const BookDetailsPage = (props) => {
   const { params } = props;
   const { chosenBookDetails, categoryOption } = params;

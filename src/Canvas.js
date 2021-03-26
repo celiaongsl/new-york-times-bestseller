@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Canvas.css";
 import WelcomePage from "./pages/WelcomePage";
 import CategoryBestsellersPage from "./pages/CategoryBestsellersPage";
 import BookDetailsPage from "./pages/BookDetailsPage";
@@ -64,20 +63,16 @@ class Canvas extends React.Component {
   };
 
   categoryBestsellersScene = (params) => {
-    this.setState((state) => {
-      return {
-        sceneType: sceneTypeConstant.CATEGORY_BESTSELLERS,
-        params,
-      };
+    this.setState({
+      sceneType: sceneTypeConstant.CATEGORY_BESTSELLERS,
+      params,
     });
   };
 
   bookDetailsScene = (params) => {
-    this.setState((state) => {
-      return {
-        sceneType: sceneTypeConstant.BOOK_DETAILS,
-        params,
-      };
+    this.setState({
+      sceneType: sceneTypeConstant.BOOK_DETAILS,
+      params,
     });
   };
 
@@ -109,7 +104,6 @@ class Canvas extends React.Component {
           <BookDetailsPage params={this.state.params} />
         </BackgroundContainer>
       );
-
     return this.renderErrorScene();
   }
 }
