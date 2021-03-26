@@ -1,0 +1,13 @@
+parameters:
+- name: books_options
+  type:
+    name: books_options
+trainingPhrases:
+- read ($books_options 'the diary of a wimpy kid' auto=false)
+- learn more about ($books_options 'the midnight library' auto=true)
+- ($books_options 'the four winds' auto=false)
+- read about ($books_options 'life after death' auto=false)
+- summary for ($books_options 'the midnight library' auto=false)
+- more info on ($books_options 'life after death' auto=false)
+- see ($books_options 'the midnight library' auto=false)
+- look at ($books_options 'the four winds' auto=false)

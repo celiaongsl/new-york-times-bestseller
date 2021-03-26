@@ -1,0 +1,15 @@
+parameters:
+- name: book_categories_options
+  type:
+    name: book_categories_options
+trainingPhrases:
+- ($book_categories_options 'non-fiction' auto=false)
+- ($book_categories_options 'non-fiction' auto=true) list
+- go back to the book list
+- can i go back to the books list?
+- what other books are there?
+- ($book_categories_options 'non-fiction books' auto=true) please
+- see ($book_categories_options 'fiction books' auto=true)
+- see ($book_categories_options 'fiction' auto=false) list
+- look at ($book_categories_options 'non-fiction' auto=false)
+- ($book_categories_options 'fiction' auto=false) books please

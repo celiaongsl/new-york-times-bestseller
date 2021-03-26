@@ -1,0 +1,18 @@
+intentEvents:
+- intent: ViewBookDetails
+  transitionToScene: BookDetails
+- intent: ViewAllBookCategories
+  transitionToScene: Welcome
+onEnter:
+  webhookHandler: category_bestsellers
+slots:
+- commitBehavior:
+    writeSessionParam: books_options
+  name: books_options
+  type:
+    name: books_options
+- commitBehavior:
+    writeSessionParam: book_categories_options
+  name: book_categories_options
+  type:
+    name: book_categories_options
