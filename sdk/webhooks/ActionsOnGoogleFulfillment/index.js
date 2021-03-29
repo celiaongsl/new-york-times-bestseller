@@ -197,7 +197,6 @@ const randomArrayItem = (array) => {
 };
 
 app.handle("welcome", (conv) => {
-
   if (!conv.device.capabilities.includes("INTERACTIVE_CANVAS")) {
     conv.add("Sorry, this device does not support Interactive Canvas!");
     conv.scene.next.name = "actions.page.END_CONVERSATION";
@@ -265,10 +264,14 @@ handleTypeOverride = ({ conv, list }) => {
 };
 
 app.handle("category_bestsellers", (conv) => {
-  let intentCategoryOption = conv.intent.params.book_categories_options.resolved;
+  let categoryOption = conv.session.params.book_categories_options;
+  // typeof conv.intent.params.book_categories_options.resolved === "undefined"
+  //   ? conv.session.params.book_categories_options
+  //   : conv.intent.params.book_categories_options.resolved;
+  // if(typeof conv.intent.params.book_categories_options.resolved === "undefined")
   let bookData = [];
   // let categoryOption = conv.session.params.book_categories_options;
-  if (intentCategoryOption === "fiction") {
+  if (categoryOption === "fiction") {
     bookData = FICTION_LIST;
     handleTypeOverride({ conv, list: FICTION_LIST });
   } else {
@@ -277,13 +280,13 @@ app.handle("category_bestsellers", (conv) => {
   }
 
   conv.add(
-    `<speak>Here's the bestsellers for the ${intentCategoryOption} category!</speak>`
+    `<speak>Here's the bestsellers for the ${categoryOption} category!</speak>`
   );
   conv.add(
     new Canvas({
       data: {
         scene: "CATEGORY_BESTSELLERS",
-        params: { bookData, intentCategoryOption },
+        params: { bookData, categoryOption },
       },
     })
   );
