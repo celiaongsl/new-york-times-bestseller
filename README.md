@@ -6,11 +6,11 @@
 
 This project combines Google's Interactive Canvas with ReactJS to create a bot that will tell you what are the bestsellers on the New York Times' list.
 
-## Why though?
+## Motivation
 
 Simply because at the time of writing this, there's 0 tutorials on how to connect ReactJS to Interactive Canvas! And so I decided to create something simple enough for anyone to get started with it.
 
-#### Note
+## Note
 
 This project will receive minimal maintenance. There'll be no feature requests and will unlikely to acknowledge pull requests unless it's to fix security  issues.
 
