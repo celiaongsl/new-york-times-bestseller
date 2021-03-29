@@ -24,7 +24,7 @@ const BookDetailsPage = (props) => {
         categoryText={categoryOption}
       />
       <div className="BookDetailsGrid">
-        <Paper customStyles={{ width: "600px" }}>
+        <Paper className="BookDetailsPaper">
           <div style={{ width: "5%", float: "left" }}>
             <DomineHeader2 customStyles={{ color: "#828282" }}>
               {chosenBookDetails.position}
@@ -59,7 +59,7 @@ const BookDetailsPage = (props) => {
             </LibreText3>
           </div>
         </Paper>
-        <div>
+        <div className="BookCoverDiv">
           <img
             src={chosenBookDetails.bookCoverURL}
             alt="The Book Cover"

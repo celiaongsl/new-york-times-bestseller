@@ -2,11 +2,17 @@
   display: grid;
   grid-gap: 50px;
   grid-template-columns: auto auto;
+  margin-bottom: 20px;
 }
 
 .BookCoverImage {
   height: 520px;
   width: 340px;
+}
+
+.BookDetailsPaper {
+  width: 600px;
+  float: left;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -17,5 +23,26 @@
   .BookCoverImage {
     height: 417px;
     width: 274px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+  .BookDetailsGrid {
+    grid-gap: 20px;
+    grid-template-columns: auto;
+  }
+
+  .BookCoverImage {
+    height: 200px;
+    width: 131px;
+  }
+
+  .BookDetailsPaper {
+    width: 320px;
+  }
+
+  .BookCoverDiv {
+      display: none;
   }
 }
