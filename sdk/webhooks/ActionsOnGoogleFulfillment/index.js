@@ -265,12 +265,7 @@ handleTypeOverride = ({ conv, list }) => {
 
 app.handle("category_bestsellers", (conv) => {
   let categoryOption = conv.session.params.book_categories_options;
-  // typeof conv.intent.params.book_categories_options.resolved === "undefined"
-  //   ? conv.session.params.book_categories_options
-  //   : conv.intent.params.book_categories_options.resolved;
-  // if(typeof conv.intent.params.book_categories_options.resolved === "undefined")
   let bookData = [];
-  // let categoryOption = conv.session.params.book_categories_options;
   if (categoryOption === "fiction") {
     bookData = FICTION_LIST;
     handleTypeOverride({ conv, list: FICTION_LIST });
