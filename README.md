@@ -1,5 +1,9 @@
 ![Alt text](/../version3/readme_assets/github_nytlogo.png?raw=true "New York Times Logo")
 
+<p align="center">
+  <img src="/../version3/readme_assets/github_nytlogo.png?raw=true" />
+</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
