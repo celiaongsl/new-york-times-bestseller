@@ -1,24 +1,49 @@
-![Alt text](/../version3/readme_assets/github_nytlogo.png?raw=true "New York Times Logo")
-
 <p align="center">
   <img src="/../version3/readme_assets/github_nytlogo.png?raw=true" />
 </p>
 
-# Getting Started with Create React App
+# New York Times Bestseller Bot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project combines Google's Interactive Canvas with ReactJS to create a bot that will tell you what are the bestsellers on the New York Times' list.
 
-## Available Scripts
+## Why though?
 
-In the project directory, you can run:
+Simply because at the time of writing this, there's 0 tutorials on how to connect ReactJS to Interactive Canvas! And so I decided to create something simple enough for anyone to get started with it.
+
+#### Note
+
+This project will receive minimal maintenance. There'll be no feature requests and will unlikely to acknowledge pull requests unless it's to fix security  issues.
+
+## Blog
+
+If you'd like a full walk-through of this bot, here's the tutorial to follow:
+
+1. Part 1: https://celiaongsl.medium.com/building-a-google-assistant-with-interactive-canvas-and-reactjs-part-1-5e290eccfdbd
+2. Part 2: https://celiaongsl.medium.com/building-a-google-assistant-with-interactive-canvas-and-reactjs-part-2-3aa88584d4cd
+3. Part 3: https://celiaongsl.medium.com/building-a-google-assistant-with-interactive-canvas-and-reactjs-part-3-5eaa14f48b6c
+
+## Screenshots
+
+The Welcome Page:
+<p align="center">
+  <img src="/../version3/readme_assets/welcomepage.png?raw=true" />
+</p>
+
+The List of Books Page:
+<p align="center">
+  <img src="/../version3/readme_assets/categorylistpage.png?raw=true" />
+</p>
+
+The Book Details Page:
+<p align="center">
+  <img src="/../version3/readme_assets/bookdetailspage.png?raw=true" />
+</p>
+
+## Installation
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This starts the front-end application and opens up into http://localhost:3000.
 
 ### `yarn build`
 
@@ -27,8 +52,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## To Deploy To Firebase
 
