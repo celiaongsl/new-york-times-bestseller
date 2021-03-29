@@ -28,7 +28,7 @@ const CategoryBestsellersPage = (props) => {
         {bookData.map((item) => {
           return (
             <BookListCard
-              interactiveCanvas={interactiveCanvas}
+              onClick={() => onClick(item.title)}
               position={item.position}
               weeksOnList={item.weeksOnList}
               title={item.title}

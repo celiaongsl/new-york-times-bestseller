@@ -198,11 +198,11 @@ const randomArrayItem = (array) => {
 
 app.handle("welcome", (conv) => {
 
-  // if (!conv.device.capabilities.includes("INTERACTIVE_CANVAS")) {
-  //   conv.add("Sorry, this device does not support Interactive Canvas!");
-  //   conv.scene.next.name = "actions.page.END_CONVERSATION";
-  //   return;
-  // }
+  if (!conv.device.capabilities.includes("INTERACTIVE_CANVAS")) {
+    conv.add("Sorry, this device does not support Interactive Canvas!");
+    conv.scene.next.name = "actions.page.END_CONVERSATION";
+    return;
+  }
 
   if (conv.user.lastSeenTime === undefined) {
     conv.add(`<speak>${NEW_GREETING}</speak>`);

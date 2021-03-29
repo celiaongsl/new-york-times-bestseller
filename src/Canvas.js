@@ -104,7 +104,10 @@ class Canvas extends React.Component {
     if (sceneType === sceneTypeConstant.BOOK_DETAILS)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <BookDetailsPage params={this.state.params} />
+          <BookDetailsPage
+            params={this.state.params}
+            interactiveCanvas={this.interactiveCanvas}
+          />
         </BackgroundContainer>
       );
     return this.renderErrorScene();

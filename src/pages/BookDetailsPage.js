@@ -7,12 +7,20 @@ import LibreText2 from "../components/Typography/LibreFranklin/LibreText2";
 import LibreText3 from "../components/Typography/LibreFranklin/LibreText3";
 
 const BookDetailsPage = (props) => {
-  const { params } = props;
+  const { params, interactiveCanvas } = props;
   const { chosenBookDetails, categoryOption } = params;
+
+  const onClick = (instructions) => {
+    interactiveCanvas.sendTextQuery(instructions);
+  };
 
   return (
     <div style={{ width: "85%", margin: "0 auto" }}>
-      <Header buttonText="BACK TO BOOK LIST" categoryText={categoryOption} />
+      <Header
+        onClick={() => onClick("go back to book list")}
+        buttonText="BACK TO BOOK LIST"
+        categoryText={categoryOption}
+      />
       <div
         style={{
           display: "grid",

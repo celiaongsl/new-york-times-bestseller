@@ -1,9 +1,10 @@
 import React from "react";
 
 const Paper = (props) => {
-  const { children, customStyles } = props;
+  const { children, customStyles, onClick } = props;
   return (
     <div
+      onClick={onClick}
       style={{
         display: "flex",
         flexDirection: "row",
