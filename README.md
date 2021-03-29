@@ -1,3 +1,5 @@
+![Alt text](/../version3/readme_assets/github_nytlogo.png?raw=true "New York Times Logo")
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -42,7 +44,7 @@ Make sure you're inside your `sdk` folder first before you run any of these comm
 
 ### `gactions push`
 
-Whenever you make changes inside the `sdk` folder, make sure to push it  to your Actions on Google to sync it. 
+Whenever you make changes inside the `sdk` folder, make sure to push it to your Actions on Google to sync it.
 
 ### `gactions pull --project-id ${your project id}`
 
