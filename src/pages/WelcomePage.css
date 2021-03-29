@@ -1,0 +1,26 @@
+.NewYorkTimesLogo {
+  width: 417px;
+  height: auto;
+}
+
+.WelcomeButtonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+  .NewYorkTimesLogo {
+    width: 350px;
+    height: auto;
+  }
+
+  .WelcomeButtonDiv {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

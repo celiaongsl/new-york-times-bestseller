@@ -20,12 +20,6 @@ const CategoryBestsellersPage = (props) => {
       />
       <div
         className={"CategoryGrid"}
-        // style={{
-        //   display: "grid",
-        //   gridGap: "50px",
-        //   gridTemplateColumns: "auto auto",
-        //   paddingBottom: "50px",
-        // }}
       >
         {bookData.map((item) => {
           return (
