@@ -1,0 +1,12 @@
+.CategoryGrid {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .CategoryGrid {
+    grid-gap: 30px;
+  }
+}

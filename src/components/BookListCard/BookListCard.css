@@ -1,0 +1,12 @@
+.BookListImage {
+  height: 141px;
+  width: 93px;
+}
+
+.BookListDiv {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    text-align: left;
+    position: relative;
+}

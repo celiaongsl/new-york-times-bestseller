@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Canvas.css";
 import WelcomePage from "./pages/WelcomePage";
 import CategoryBestsellersPage from "./pages/CategoryBestsellersPage";
 import BookDetailsPage from "./pages/BookDetailsPage";
@@ -25,7 +24,7 @@ class Canvas extends React.Component {
     this.state = {
       marginTop: "0px",
       sceneType: sceneTypeConstant.WELCOME,
-      params: [],
+      params: null,
     };
   }
 
@@ -64,18 +63,16 @@ class Canvas extends React.Component {
   };
 
   categoryBestsellersScene = (params) => {
-    this.setState((state) => {
-      return {
-        sceneType: sceneTypeConstant.CATEGORY_BESTSELLERS,
-      };
+    this.setState({
+      sceneType: sceneTypeConstant.CATEGORY_BESTSELLERS,
+      params,
     });
   };
 
   bookDetailsScene = (params) => {
-    this.setState((state) => {
-      return {
-        sceneType: sceneTypeConstant.BOOK_DETAILS,
-      };
+    this.setState({
+      sceneType: sceneTypeConstant.BOOK_DETAILS,
+      params,
     });
   };
 
@@ -92,22 +89,27 @@ class Canvas extends React.Component {
     if (sceneType === sceneTypeConstant.WELCOME)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <WelcomePage />
+          <WelcomePage interactiveCanvas={this.interactiveCanvas} />
         </BackgroundContainer>
       );
     if (sceneType === sceneTypeConstant.CATEGORY_BESTSELLERS)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <CategoryBestsellersPage />
+          <CategoryBestsellersPage
+            params={this.state.params}
+            interactiveCanvas={this.interactiveCanvas}
+          />
         </BackgroundContainer>
       );
     if (sceneType === sceneTypeConstant.BOOK_DETAILS)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <BookDetailsPage />
+          <BookDetailsPage
+            params={this.state.params}
+            interactiveCanvas={this.interactiveCanvas}
+          />
         </BackgroundContainer>
       );
-
     return this.renderErrorScene();
   }
 }

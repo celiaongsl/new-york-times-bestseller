@@ -1,0 +1,21 @@
+.BookDetailsGrid {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto;
+}
+
+.BookCoverImage {
+  height: 520px;
+  width: 340px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .BookDetailsGrid {
+    grid-gap: 30px;
+  }
+
+  .BookCoverImage {
+    height: 417px;
+    width: 274px;
+  }
+}

@@ -3,7 +3,13 @@ import RoundButton from "../components/Button/RoundButton";
 import DomineHeader1 from "../components/Typography/Domine/DomineHeader1";
 import DomineHeader2 from "../components/Typography/Domine/DomineHeader2";
 
-const WelcomePage = () => {
+const WelcomePage = (props) => {
+  const { interactiveCanvas } = props;
+
+  const onClick = (chosenCategory) => {
+    interactiveCanvas.sendTextQuery(chosenCategory);
+  }
+
   return (
     <div>
       <div style={{marginTop: '20px'}}>
@@ -25,8 +31,12 @@ const WelcomePage = () => {
           justifyContent: "space-around",
         }}
       >
-        <RoundButton>FICTION</RoundButton>
-        <RoundButton>NON-FICTION</RoundButton>
+        <RoundButton 
+        onClick={() => onClick('fiction')}
+        >FICTION</RoundButton>
+        <RoundButton 
+        onClick={() => onClick('non-fiction')}
+        >NON-FICTION</RoundButton>
       </div>
       
     </div>

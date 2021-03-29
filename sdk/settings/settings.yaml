@@ -1,7 +1,22 @@
+category: EDUCATION_AND_REFERENCE
 defaultLocale: en
 localizedSettings:
+  developerEmail: celiaongsl@gmail.com
+  developerName: Celia Ong
   displayName: New York Times Bestseller
+  fullDescription: Learn about what the latest bestsellers is when you talk to New
+    York Times Bestsellers!
+  largeBannerImage: https://lh3.googleusercontent.com/-LFnLjuDBKXKx6qlkqXB3NGmuR6-WLD5cbzrvgXSU1iOSOqOecdwuuqs4njs8HcQl3wIrcJfni4
+  privacyPolicyUrl: https://docs.google.com/document/d/1UL4pSPL6-LQKzpY1ZDRZ8YneVY6z1-HmsFaOagkpVzU/edit?usp=sharing
   pronunciation: New York Times Bestseller
+  sampleInvocations:
+  - Talk to New York Times Bestseller
+  shortDescription: New York Times Bestsellers lets you know about the latest bestsellers
+  smallLogoImage: https://lh3.googleusercontent.com/-CvN_VIIbF2vN4GCets1hoLj28I7KKWtsYz5BZ6Brc8uwJnVKVGI0wFoSYjMPLzbBTxpFErOLznv
   voice: female_1
 projectId: new-york-times-bestseller
+surfaceRequirements:
+  minimumRequirements:
+  - capability: AUDIO_OUTPUT
+  - capability: SCREEN_OUTPUT
 usesInteractiveCanvas: true
