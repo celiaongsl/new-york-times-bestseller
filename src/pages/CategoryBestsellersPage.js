@@ -1,6 +1,7 @@
 import React from "react";
 import BookListCard from "../components/BookListCard";
 import Header from "../components/Header";
+import "./CategoryBestsellersPage.css";
 
 const CategoryBestsellersPage = (props) => {
   const { params, interactiveCanvas } = props;
@@ -18,12 +19,13 @@ const CategoryBestsellersPage = (props) => {
         categoryText={categoryOption}
       />
       <div
-        style={{
-          display: "grid",
-          gridGap: "50px",
-          gridTemplateColumns: "auto auto",
-          paddingBottom: "50px",
-        }}
+        className={"CategoryGrid"}
+        // style={{
+        //   display: "grid",
+        //   gridGap: "50px",
+        //   gridTemplateColumns: "auto auto",
+        //   paddingBottom: "50px",
+        // }}
       >
         {bookData.map((item) => {
           return (

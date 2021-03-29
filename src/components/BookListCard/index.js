@@ -4,6 +4,7 @@ import DomineHeader2 from "../Typography/Domine/DomineHeader2";
 import LibreText1 from "../Typography/LibreFranklin/LibreText1";
 import LibreText2 from "../Typography/LibreFranklin/LibreText2";
 import LibreText3 from "../Typography/LibreFranklin/LibreText3";
+import "./BookListCard.css";
 
 const BookListCard = (props) => {
   const { position, weeksOnList, title, author, bookCoverURL, onClick } = props;
@@ -14,20 +15,10 @@ const BookListCard = (props) => {
         {position}
       </DomineHeader2>
 
-      <img
-        src={bookCoverURL}
-        style={{ height: "141px", width: "93px" }}
-        alt="The Book Cover"
-      />
+      <img src={bookCoverURL} className="BookListImage" alt="The Book Cover" />
 
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "65%",
-          textAlign: "left",
-          position: "relative",
-        }}
+        className="BookListDiv"
       >
         <LibreText3>{weeksOnList.toUpperCase()}</LibreText3>
         <LibreText1 customStyles={{ fontWeight: 700 }}>

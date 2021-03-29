@@ -6,6 +6,8 @@ import LibreText1 from "../components/Typography/LibreFranklin/LibreText1";
 import LibreText2 from "../components/Typography/LibreFranklin/LibreText2";
 import LibreText3 from "../components/Typography/LibreFranklin/LibreText3";
 
+import "./BookDetailsPage.css";
+
 const BookDetailsPage = (props) => {
   const { params, interactiveCanvas } = props;
   const { chosenBookDetails, categoryOption } = params;
@@ -21,13 +23,7 @@ const BookDetailsPage = (props) => {
         buttonText="BACK TO BOOK LIST"
         categoryText={categoryOption}
       />
-      <div
-        style={{
-          display: "grid",
-          gridGap: "50px",
-          gridTemplateColumns: "auto auto",
-        }}
-      >
+      <div className="BookDetailsGrid">
         <Paper customStyles={{ width: "600px" }}>
           <div style={{ width: "5%", float: "left" }}>
             <DomineHeader2 customStyles={{ color: "#828282" }}>
@@ -67,7 +63,7 @@ const BookDetailsPage = (props) => {
           <img
             src={chosenBookDetails.bookCoverURL}
             alt="The Book Cover"
-            style={{ height: "520px", width: "340px" }}
+            className="BookCoverImage"
           />
         </div>
       </div>
