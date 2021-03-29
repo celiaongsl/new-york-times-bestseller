@@ -3,11 +3,20 @@ import BookListCard from "../components/BookListCard";
 import Header from "../components/Header";
 
 const CategoryBestsellersPage = (props) => {
-  const { params } = props;
+  const { params, interactiveCanvas } = props;
   const { bookData, categoryOption } = params;
+
+  const onClick = (instructions) => {
+    interactiveCanvas.sendTextQuery(instructions);
+  };
+
   return (
     <div style={{ width: "85%", margin: "0 auto" }}>
-      <Header buttonText="BACK TO CATEGORIES" categoryText={categoryOption} />
+      <Header
+        onClick={() => onClick("go back to category list")}
+        buttonText="BACK TO CATEGORIES"
+        categoryText={categoryOption}
+      />
       <div
         style={{
           display: "grid",
@@ -19,6 +28,7 @@ const CategoryBestsellersPage = (props) => {
         {bookData.map((item) => {
           return (
             <BookListCard
+              interactiveCanvas={interactiveCanvas}
               position={item.position}
               weeksOnList={item.weeksOnList}
               title={item.title}

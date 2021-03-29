@@ -6,9 +6,21 @@ import LibreText2 from "../Typography/LibreFranklin/LibreText2";
 import LibreText3 from "../Typography/LibreFranklin/LibreText3";
 
 const BookListCard = (props) => {
-  const { position, weeksOnList, title, author, bookCoverURL } = props;
+  const {
+    position,
+    weeksOnList,
+    title,
+    author,
+    bookCoverURL,
+    interactiveCanvas,
+  } = props;
+
+  const onClick = (chosenBookTitle) => {
+    interactiveCanvas.sendTextQuery(chosenBookTitle);
+  };
+
   return (
-    <Paper>
+    <Paper onClick={() => onClick(title)}>
       <DomineHeader2 customStyles={{ color: "#828282" }}>
         {position}
       </DomineHeader2>

@@ -89,13 +89,16 @@ class Canvas extends React.Component {
     if (sceneType === sceneTypeConstant.WELCOME)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <WelcomePage />
+          <WelcomePage interactiveCanvas={this.interactiveCanvas} />
         </BackgroundContainer>
       );
     if (sceneType === sceneTypeConstant.CATEGORY_BESTSELLERS)
       return (
         <BackgroundContainer marginTop={this.state.marginTop}>
-          <CategoryBestsellersPage params={this.state.params} />
+          <CategoryBestsellersPage
+            params={this.state.params}
+            interactiveCanvas={this.interactiveCanvas}
+          />
         </BackgroundContainer>
       );
     if (sceneType === sceneTypeConstant.BOOK_DETAILS)

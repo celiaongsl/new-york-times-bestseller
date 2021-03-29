@@ -197,11 +197,13 @@ const randomArrayItem = (array) => {
 };
 
 app.handle("welcome", (conv) => {
-  if (!conv.device.capabilities.includes("INTERACTIVE_CANVAS")) {
-    conv.add("Sorry, this device does not support Interactive Canvas!");
-    conv.scene.next.name = "actions.page.END_CONVERSATION";
-    return;
-  }
+
+  // if (!conv.device.capabilities.includes("INTERACTIVE_CANVAS")) {
+  //   conv.add("Sorry, this device does not support Interactive Canvas!");
+  //   conv.scene.next.name = "actions.page.END_CONVERSATION";
+  //   return;
+  // }
+
   if (conv.user.lastSeenTime === undefined) {
     conv.add(`<speak>${NEW_GREETING}</speak>`);
   } else {
@@ -263,8 +265,7 @@ handleTypeOverride = ({ conv, list }) => {
 };
 
 app.handle("category_bestsellers", (conv) => {
-  let intentCategoryOption =
-    conv.intent.params.book_categories_options.resolved;
+  let intentCategoryOption = conv.intent.params.book_categories_options.resolved;
   let bookData = [];
   // let categoryOption = conv.session.params.book_categories_options;
   if (intentCategoryOption === "fiction") {
@@ -282,7 +283,7 @@ app.handle("category_bestsellers", (conv) => {
     new Canvas({
       data: {
         scene: "CATEGORY_BESTSELLERS",
-        params: { bookData, categoryOption: intentCategoryOption },
+        params: { bookData, intentCategoryOption },
       },
     })
   );
