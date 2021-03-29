@@ -1,0 +1,22 @@
+.HeaderNewYorkTimesLogo {
+  width: 417px;
+  height: auto;
+}
+
+.HeaderTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+  .HeaderNewYorkTimesLogo {
+    width: 330px;
+  }
+
+  .HeaderTitle {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

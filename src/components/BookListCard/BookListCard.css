@@ -10,3 +10,13 @@
     text-align: left;
     position: relative;
 }
+
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+    .BookListImage {
+      height: 100px;
+      width: 66px;
+    }
+  }
+  

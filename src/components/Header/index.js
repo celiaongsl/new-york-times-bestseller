@@ -3,6 +3,8 @@ import { capitalizeString } from "../../helper/utils";
 import TextButton from "../Button/TextButton";
 import DomineHeader2 from "../Typography/Domine/DomineHeader2";
 
+import "./Header.css";
+
 const Header = (props) => {
   const { buttonText, categoryText, onClick } = props;
   return (
@@ -10,12 +12,10 @@ const Header = (props) => {
       <div style={{ textAlign: "left" }}>
         <TextButton onClick={onClick}>&lt; {buttonText}</TextButton>
       </div>
-      <div
-        style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
-      >
+      <div className="HeaderTitle">
         {" "}
         <img
-          style={{ width: "417px", height: "auto" }}
+          className="HeaderNewYorkTimesLogo"
           src={process.env.PUBLIC_URL + "/img/new_york_times_logo.png"}
           alt="The New York Times Logo"
         />

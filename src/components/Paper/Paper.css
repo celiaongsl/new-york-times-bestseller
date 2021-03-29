@@ -14,3 +14,10 @@
     width: 430px;
   }
 }
+
+/* Mobile */
+@media screen and (max-width: 479px) {
+  .PaperDiv {
+    width: 330px;
+  }
+}
